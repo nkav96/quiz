@@ -6,21 +6,18 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
 body {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #1c1c1e; /* Dark background color */
-  color: #fff; /* Light text color */
+  background: #dddfeb;
 }
-
 .container {
   position: relative;
   width: 100%;
   max-width: 400px;
-  background: #2c2c2e; /* Slightly lighter background color */
+  background: #1f2847;
   padding: 30px;
   overflow: hidden;
   border-radius: 10px;
@@ -30,36 +27,32 @@ body {
 .heading {
   text-align: center;
   font-size: 40px;
-  color: #007aff; /* iOS blue color */
+  color: #fff;
   margin-bottom: 50px;
 }
-
 label {
   display: block;
-  font-size: 14px; /* Slightly increased font size */
+  font-size: 12px;
   margin-bottom: 10px;
+  color: #fff;
 }
-
 select {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #4e4e50; /* Light border color */
+  padding: 10px;
+  border: none;
   text-transform: capitalize;
   border-radius: 5px;
   margin-bottom: 20px;
-  background: #2c2c2e;
-  color: #fff;
+  background: #fff;
+  color: #1f2847;
   font-size: 14px;
 }
-
 .start-screen .btn {
   margin-top: 50px;
 }
-
 .hide {
   display: none;
 }
-
 .timer {
   width: 100%;
   height: 100px;
@@ -69,7 +62,6 @@ select {
   flex-direction: column;
   margin-bottom: 30px;
 }
-
 .timer .progress {
   position: relative;
   width: 100%;
@@ -78,13 +70,16 @@ select {
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 10px;
-  border: 3px solid #4e4e50; /* Light border color */
+  border: 3px solid #3f4868;
 }
-
 .timer .progress .progress-bar {
-  background: linear-gradient(to right, #007aff, #0056b3);
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  background: linear-gradient(to right, #ea517c, #b478f1);
+  transition: 1s linear;
 }
-
 .timer .progress .progress-text {
   position: absolute;
   top: 50%;
@@ -101,12 +96,10 @@ select {
   font-weight: 500;
   margin-bottom: 20px;
 }
-
 .question-wrapper .number .total {
   color: #576081;
   font-size: 18px;
 }
-
 .question-wrapper .question {
   color: #fff;
   font-size: 20px;
@@ -120,7 +113,7 @@ select {
   padding: 20px;
   border-radius: 10px;
   color: #fff;
-  border: 3px solid #4e4e50; /* Light border color */
+  border: 3px solid #3f4868;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -128,46 +121,44 @@ select {
   cursor: pointer;
   transition: 0.3s linear;
 }
-
 .answer .checkbox {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  border: 2px solid #007aff; /* iOS blue color */
+  border: 3px solid #3f4868;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
 }
-
 .answer .checkbox i {
-  color: #007aff;
-  font-size: 14px;
+  color: #fff;
+  font-size: 10px;
+  opacity: 0;
+  transition: all 0.3s;
 }
-
 .answer:hover:not(.checked) .checkbox,
 .answer.selected .checkbox {
   background-color: #0c80ef;
   border-color: #0c80ef;
 }
-
 .answer.selected .checkbox i {
   opacity: 1;
 }
-
 .answer.correct {
-  border-color: #0cef2a;
+    border-color: #0cef2a;
 }
-
 .answer.wrong {
   border-color: #fc3939;
 }
-
 .question-wrapper,
 .answer-wrapper {
   margin-bottom: 50px;
 }
-
 .btn {
   width: 100%;
   height: 60px;
-  background: #007aff; /* iOS blue color */
+  background: #0c80ef;
   border: none;
   border-radius: 10px;
   color: #fff;
@@ -176,30 +167,26 @@ select {
   cursor: pointer;
   transition: 0.3s linear;
 }
-
 .btn:hover {
-  background: #0056b3; /* Slightly darker blue on hover */
+  background: #0a6bc5;
 }
-
 .btn:disabled {
-  background: #6b6b6d; /* Disabled button color */
+  background: #576081;
   cursor: not-allowed;
 }
-
 .btn.next {
   display: none;
 }
 
 .end-screen .score {
-  color: #007aff;
+  color: #fff;
   font-size: 25px;
   font-weight: 500;
   margin-bottom: 80px;
   text-align: center;
 }
-
 .score .score-text {
-  color: #333;
+  color: #a2aace;
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 120px;
